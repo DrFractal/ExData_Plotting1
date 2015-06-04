@@ -21,7 +21,7 @@ dateTime <- strptime(paste(myRows$Date, " ", myRows$Time), "%d/%m/%Y %X")
 
 png("plot3.png")
 
-plot(dateTime, as.numeric(myRows$Sub_metering_1), type = 'l', ylab = 'Global Active Power (kilowatts)',
+plot(dateTime, as.numeric(myRows$Sub_metering_1), type = 'l', ylab = 'Energy sub metering',
      xlab = '')
 lines(dateTime, as.numeric(myRows$Sub_metering_2), col = 'red')
 lines(dateTime, as.numeric(myRows$Sub_metering_3), col = 'blue')
