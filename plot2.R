@@ -20,7 +20,7 @@ myRows <- mydf[mydf$Date == "1/2/2007" | mydf$Date == "2/2/2007", ]
 # Combine the date and time vectors into one date object vector
 dateTime <- strptime(paste(myRows$Date, " ", myRows$Time), "%d/%m/%Y %X")
 
-png("plot2.png")
+png("plot2.png") # use a PGN device to plot
 plot(dateTime, as.numeric(myRows$Global_active_power), type = 'l', ylab = 'Global Active Power (kilowatts)',
      xlab = '')
-dev.off()
+dev.off() # close the PGN device

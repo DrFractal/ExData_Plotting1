@@ -44,4 +44,4 @@ legend('topright', c('Sub_metering_1', 'Sub_metering_2', 'Sub_metering_3'),
 plot(dateTime, myRows$Global_reactive_power, type = 'l', ylab = 'Global_reactive_power',
      xlab = 'datetime')
 
-dev.off()
+dev.off() # close the PGN device

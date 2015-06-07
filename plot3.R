@@ -20,7 +20,7 @@ myRows <- mydf[mydf$Date == "1/2/2007" | mydf$Date == "2/2/2007", ]
 # Combine the date and time vectors into one date object vector
 dateTime <- strptime(paste(myRows$Date, " ", myRows$Time), "%d/%m/%Y %X")
 
-png("plot3.png")
+png("plot3.png") # use a PGN device to plot
 
 plot(dateTime, as.numeric(myRows$Sub_metering_1), type = 'l', ylab = 'Energy sub metering',
      xlab = '')
@@ -31,4 +31,4 @@ legend('topright', c('Sub_metering_1', 'Sub_metering_2', 'Sub_metering_3'),
        lwd = 2, # the thickness of the lines
        col = c('black', 'red', 'blue'))
 
-dev.off()
+dev.off() # close the PGN device

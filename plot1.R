@@ -25,7 +25,7 @@ myRows <- mydf[mydf$Date == "1/2/2007" | mydf$Date == "2/2/2007", ]
 # rm("mydf")  ## clean up
 # myRows <- filter(plot1df, Date == "1/2/2007" | Date == "2/2/2007")
 
-png("plot1.png") #, width = 4, height = 4, units = "in", res = 300)
+png("plot1.png") # use a PGN device to plot
 hist(as.numeric(myRows$Global_active_power), freq = TRUE, breaks = 12, 
      col = 'red', xlab = 'Global Active Power (kilowatts)', main = 'Global Active Power')
-dev.off()
+dev.off() # close the PGN device
